@@ -1,16 +1,19 @@
 module.exports = [
   {
     username: 'showeimer',
-    password: 'passwordsw'
+    password: 'passwordsw',
+    firstName: 'Sho'
   },
 
   {
     username: 'roberthowington',
-    password: 'passwordrh'
+    password: 'passwordrh',
+    firstName: 'Robert'
   },
 
   {
     username: 'sethcarrino',
-    password: 'passwordsc'
+    password: 'passwordsc',
+    firstName: 'Seth'
   }
 ]

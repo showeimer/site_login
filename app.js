@@ -33,7 +33,7 @@ app.use(expressValidator());
 
 // session middleware
 app.use((req, res, next) => {
-  console.log(req.session);
+  // console.log(req.session);
 
   if(!req.session.users) {
     req.session.users = [];
@@ -48,15 +48,21 @@ app.get('/', (req, res) => {
   if(req.session.users === undefined || req.session.users.length === 0) {
     res.render('login');
   } else {
-    res.render('index');
+    console.log(req.session.users);
+    res.render('index', {userInfo: req.session.users});
   }
 
 });
 
-app.post('/login', (req, res) => {
+// app.get('/login', (req, res) => {
+//   res.render('login')
+// })
+
+
+app.post('/login/auth', (req, res) => {
   let loginInfo = req.body;
-  console.log(req.body);
-  console.log(loginData);
+  // console.log(loginInfo);
+  // console.log(loginData);
 
   // validating user has entered text into input fields
   req.checkBody('username', 'Please enter a username').notEmpty();
@@ -64,20 +70,18 @@ app.post('/login', (req, res) => {
 
   let errors = req.getValidationResult();
 
+  // if (errors) {
+  //   res.render('login', {errors:errors});
+  // }
+
   for (let i = 0; i < loginData.length; i++) {
     if (loginInfo.username === loginData[i].username && loginInfo.password === loginData[i].password) {
-      // console.log(users);
-      // session.cookie.users.push(loginInfo);
-      // console.log(users);
-      res.render('index');
-    } else if (errors) {
-      console.log(loginInfo);
-      res.render('login', {errors: errors, loginInfo: loginInfo});
-    } else {
-      res.redirect('login');
+      req.session.users.push(loginData[i]);
+      // console.log(req.session.users);
     }
   }
 
+  res.redirect('/');
 })
 
 app.listen(3000, function() {

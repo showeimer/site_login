@@ -5,6 +5,12 @@
     <title>Welcome</title>
   </head>
   <body>
-    <h1>Hello, {{loginInfo.username}}</h1>
+    {{#userInfo}}
+    <h1>Welcome Back, {{firstName}}</h1>
+    {{/userInfo}}
+    <h1>there should be something</h1>
+    <form action="logout" method="post">
+      <button>Logout</button>
+    </form>
   </body>
 </html>
