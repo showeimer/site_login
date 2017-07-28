@@ -1,0 +1,17 @@
+/* Home Page Styles */
+
+
+
+/* Signup Page Styles */
+label, input {
+  font-size: 1.5rem;
+}
+
+button {
+  font-size: 1.5rem;
+}
+
+ul li {
+  font-size: 1.25rem;
+  list-style-type: none;
+}
