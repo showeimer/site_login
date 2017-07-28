@@ -2,13 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Welcome</title>
+    <title>{{firstName}}'s Profile Page'</title>
+    <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
     {{#userInfo}}
     <h1>Welcome Back, {{firstName}}</h1>
+    <h2>Your profile information:</h2>
+    <ul>
+      <li>First name:  {{firstName}}</li>
+      <li>Last name:  {{lastName}}</li>
+      <li>Age:  {{age}}</li>
+      <li>Username:  {{userName}}</li>
+    </ul>
     {{/userInfo}}
-    <h1>there should be something</h1>
+
     <form action="logout" method="post">
       <button>Logout</button>
     </form>

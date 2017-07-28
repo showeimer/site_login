@@ -12,12 +12,15 @@
     {{/errors}}
     <form action="/login/auth" method="post">
       <label for="username">Username:  </label>
-      <input type="text" name="username" value="{{loginInfo.username}}">
+      <input type="text" name="username" value="{{loginInfo.username}}" />
 
       <label for="password">Password:  </label>
-      <input type="password" name="password" value="">
+      <input type="password" name="password" value="" />
 
       <button>Login</button>
     </form>
+
+    <p>Don't have an account?  <a href="/signup">Sign up</a></p>
+
   </body>
 </html>

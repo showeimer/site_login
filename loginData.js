@@ -1,19 +1,25 @@
 module.exports = [
   {
-    username: 'showeimer',
-    password: 'passwordsw',
-    firstName: 'Sho'
+    firstName: 'Sho',
+    lastName: 'Weimer',
+    age: 28,
+    userName: 'showeimer',
+    password: 'passwordsw'
   },
 
   {
-    username: 'roberthowington',
-    password: 'passwordrh',
-    firstName: 'Robert'
+    firstName: 'Robert',
+    lastName: 'Howington',
+    age: 30,
+    userName: 'roberthowington',
+    password: 'passwordrh'
   },
 
   {
-    username: 'sethcarrino',
-    password: 'passwordsc',
-    firstName: 'Seth'
+    firstName: 'Seth',
+    lastName: 'Carrino',
+    age: 25,
+    userName: 'sethcarrino',
+    password: 'passwordsc'
   }
 ]
