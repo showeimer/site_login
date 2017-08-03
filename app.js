@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const loginData = require('./loginData');
 const expressValidator = require('express-validator');
+const words = fs.readFileSync("/usr/share/dict/words", "utf-8").toLowerCase().split("\n");
 
 // creating my log-in app
 const app = express();
